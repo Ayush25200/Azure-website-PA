@@ -1,0 +1,17 @@
+{
+  "name": "my-azure-static-site",
+  "version": "1.0.0",
+  "description": "A simple static website with Node.js deployed on Azure",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "echo No build step needed",
+    "test": "echo No tests yet"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
