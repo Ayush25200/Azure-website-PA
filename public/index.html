@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Azure Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav>
+      <div class="logo">⚡ MyAzureSite</div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Hello, Azure! 👋</h1>
+      <p>A simple static website built with Node.js and deployed on Azure.</p>
+      <a href="#about" class="btn">Learn More</a>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About This Project</h2>
+      <div class="cards">
+        <div class="card">
+          <span class="icon">🚀</span>
+          <h3>Node.js</h3>
+          <p>Powered by Express.js to serve static files efficiently.</p>
+        </div>
+        <div class="card">
+          <span class="icon">☁️</span>
+          <h3>Azure</h3>
+          <p>Deployed on Microsoft Azure App Service for practice.</p>
+        </div>
+        <div class="card">
+          <span class="icon">🎨</span>
+          <h3>Static Site</h3>
+          <p>Clean HTML, CSS, and JavaScript — no frameworks needed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Made with ❤️ by <strong>Ayush</strong> for Azure practice.</p>
+      <button class="btn" onclick="showMessage()">Say Hello!</button>
+      <p id="message" class="message"></p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 MyAzureSite. Deployed on Azure 🚀</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
