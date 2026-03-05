@@ -1,5 +1,10 @@
 pipeline {
+
     agent any
+
+    tools {
+        nodejs "nodejs"
+    }
 
     stages {
 
@@ -11,13 +16,14 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                bat 'docker build -t azure-website-pa .'
+                bat 'docker build -t azure-site .'
             }
         }
 
         stage('Run Container') {
             steps {
-                bat 'docker run -d -p 3000:3000 azure-website-pa'
+                bat 'docker rm -f azure-container || exit 0'
+                bat 'docker run -d -p 3000:3000 --name azure-container azure-site'
             }
         }
 
