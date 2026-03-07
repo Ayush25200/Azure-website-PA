@@ -13,6 +13,16 @@ pipeline {
                 bat 'npm install'
             }
         }
+        stage('SonarQube SAST Scan') {
+            steps {
+                script {
+                    def scannerHome = tool 'sonar-scanner'
+                    withSonarQubeEnv('SonarQube') {
+                        bat "\"${scannerHome}\\bin\\sonar-scanner.bat\""
+                    }
+                }
+            }
+        }
 
         stage('Build Docker Image') {
             steps {
